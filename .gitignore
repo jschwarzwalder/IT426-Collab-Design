@@ -50,3 +50,4 @@ Temporary Items
 .lock
 *.lck
 tmp/
+*.bak
