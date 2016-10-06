@@ -2,6 +2,7 @@ package edu.greenriver.it.patterns;
 
 import java.time.LocalDateTime;
 
+@SuppressWarnings("unused")
 public class ApplicationStatistics {
 	
 	//fields (data)
@@ -24,9 +25,13 @@ public class ApplicationStatistics {
 		
 		if(instance == null){
 			instance = new ApplicationStatistics();
+			System.out.println("Creating the singleton object!");
+			
 		}
 		
 		return instance;
+		
+	
 		
 	}
 	
