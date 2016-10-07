@@ -62,3 +62,8 @@ tmp/
 .metadata/
 .recommenders/
 *.class
+Singleton Pattern/.settings/org.eclipse.jdt.core.prefs
+*.classpath
+Singleton Pattern/.project
+*.vux
+*.zip
