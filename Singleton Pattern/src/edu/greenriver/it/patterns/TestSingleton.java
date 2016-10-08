@@ -5,18 +5,11 @@ public class TestSingleton {
 
 	public static void main(String[] args) {
 		
-		ApplicationStatistics stats = ApplicationStatistics.getInstance();
-		stats.startApp();
-		
-		String word = "Hello";
-		stats.objectCreated();
-		
-		stats.endApp();
-		System.out.println(stats.toString());
+		testThreads();
 	}
 	
 	public static void testThreads() {
-		Thread[] threads = new Thread[5];
+		TestThread[] threads = new TestThread[5];
 		
 		for (int i = 0; i < threads.length; i++){
 			threads[i] = new TestThread();
