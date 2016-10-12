@@ -3,49 +3,50 @@ package edu.greenriver.it.patterns;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DBMultiton {
-	
+public class DBMultiton 
+{
 	//fields
 	private String host;
 	private String user;
 	private String password;
 	private String dbName;
 	
-	//multiton
+	//multiton...
 	private static Map<String, DBMultiton> instances = new HashMap<String, DBMultiton>();
-	private static String[] vaildNames = {"primary", "secondary", "third-party"};
+	private static String[] validNames = {"primary", "secondary", "third-party"};
 	
 	//prevent instantiation
-	private DBMultiton(){
+	private DBMultiton()
+	{
 		//do nothing
-		
 	}
 	
-	public static DBMultiton getInstance(String.name){
-		
+	public static DBMultiton getInstance(String name)
+	{
 		//validate the name given
-		boolean food = false;
-		for (int i = 0; i < validNames.length; i++){
-				
-		if(name.equals(valideNames[i])) {
-			found = true;
-			break;
+		boolean found = false;
+		for (int i = 0; i < validNames.length; i++)
+		{
+			if (name.equals(validNames[i]))
+			{
+				found = true;
+				break;
+			}
 		}
-	}
-		if (!found){
+		
+		//avoid returning null
+		if (!found)
+		{
 			throw new IllegalArgumentException("named multiton not found!");
 		}
-	
-	//check whether the object is created yet or not?
-		if (!instances.containsKey(name)){
-			//here it would bread if using threads 
+		
+		//check whether the object is created yet or not?
+		if (!instances.containsKey(name))
+		{
 			instances.put(name, new DBMultiton());
 		}
-	
-	//return the object
+		
+		//return the object
 		return instances.get(name);
 	}
-	
-	
-
 }
