@@ -67,3 +67,5 @@ Singleton Pattern/.settings/org.eclipse.jdt.core.prefs
 Singleton Pattern/.project
 *.vux
 *.zip
+*.project
+*.prefs
