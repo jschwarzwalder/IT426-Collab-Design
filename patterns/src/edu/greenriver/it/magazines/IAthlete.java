@@ -1,16 +1,15 @@
-package edu.greenriver.it.patterns;
+package edu.greenriver.it.magazines;
 
-public interface IAthlete {
-	
+public interface IAthlete 
+{
 	public String getFirstName();
 	public String getLastName();
 	
 	/*
 	 * Expecting output like so:
-	 * type
-	 * 
+	 * type : value \n
+	 * type : value \n
+	 * ...
 	 */
-	
 	public String getEntireStatLine();
-
 }
