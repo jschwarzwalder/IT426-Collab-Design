@@ -1,7 +1,19 @@
+/**
+ * Jami Schwarzwalder
+ * 10/14/2016
+ * Writer.java
+ * This file reads and writes products to and from files.
+ */
 package edu.greenriver.it.fileio;
 
 import edu.greenriver.it.products.Product;
 
+/**
+ * This interface reads and writes products to and from files.
+ *
+ * @author Jami Schwarzwalder
+ * @version 1.1
+ */
 public interface Writer {
 	
 	/**
