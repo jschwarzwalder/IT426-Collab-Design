@@ -33,6 +33,7 @@ public class JsonWriter extends Object implements Writer {
 	 * @param object
 	 *            a product object to be written to file
 	 */
+	@SuppressWarnings("unchecked") //warnings about HashMap raw type
 	@Override
 	public void saveObject(Product object) {
 		JSONObject dataObject = new JSONObject();
