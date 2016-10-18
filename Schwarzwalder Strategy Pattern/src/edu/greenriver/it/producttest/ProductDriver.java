@@ -1,6 +1,11 @@
+/**
+ * Jami Schwarzwalder
+ * 10/17/2016
+ * ProductDriver.java
+ * This file reads and writes products to and from XML, JSON, and Java Object files.
+ * 
+ */
 package edu.greenriver.it.producttest;
-
-import java.io.File;
 
 import edu.greenriver.it.fileio.JsonWriter;
 import edu.greenriver.it.fileio.ObjectWriter;
@@ -8,8 +13,19 @@ import edu.greenriver.it.fileio.Writer;
 import edu.greenriver.it.fileio.XmlWriter;
 import edu.greenriver.it.products.Product;
 
+/**
+ * Takes User Input then reads and writes products to and from XML, JSON, and Java Object files.
+ * 
+ * @author Jami Schwarzwalder
+ * @version 1.1
+ */
 public class ProductDriver {
 
+	/**
+	 * Takes User Input then reads and writes products to and from XML, JSON, and Java Object files.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// make Product
 		Product kittens = new Product("Exploding Kittens", 19.99,
