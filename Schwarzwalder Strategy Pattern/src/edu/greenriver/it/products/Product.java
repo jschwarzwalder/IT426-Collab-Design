@@ -9,12 +9,16 @@ package edu.greenriver.it.products;
 import java.io.Serializable;
 import java.util.Arrays;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * This class represents a Product.
  *
  * @author Jami Schwarzwalder
  * @version 1.1
  */
+@XmlRootElement
 public class Product implements Serializable {
 	
 	/**
@@ -57,6 +61,7 @@ public class Product implements Serializable {
 	 * 
 	 * @return the name of the product
 	 */
+	@XmlElement
 	public String getName() {
 		return name;
 	}

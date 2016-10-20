@@ -36,7 +36,7 @@ public class ProductDriver {
 			// Print to console
 			Console.print("Product Manager Application");
 			Console.print("Write a product to a file:");
-			Console.print("Product: " + kittens.toString());
+			Console.print(kittens.toString());
 			System.out.println();
 			Console.print("1. Save as JSON");
 			Console.print("2. Save as XML");
@@ -45,7 +45,7 @@ public class ProductDriver {
 
 			userSelection = Console.getInt("Select a file format");
 
-			Console.print("Writing product to file...");
+			
 			Writer testWriter = null;
 
 			while (testWriter == null) {
@@ -66,7 +66,8 @@ public class ProductDriver {
 					userSelection = Console.getInt("Invalid Input. Select a file format");
 				}
 			}
-
+			Console.print("Writing product to file...");
+			
 			// save file in format selected by User
 			testWriter.saveObject(kittens);
 			Console.print("Object saved to file.");

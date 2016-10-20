@@ -6,6 +6,13 @@
  */
 package edu.greenriver.it.fileio;
 
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+
 import edu.greenriver.it.products.Product;
 
 /**
@@ -27,8 +34,17 @@ public class XmlWriter implements Writer {
 	 */
 	@Override
 	public void saveObject(Product object) {
-		// TODO Auto-generated method stub
-
+		
+		try {
+			JAXBContext context = JAXBContext.newInstance(Product.class);
+			
+			Marshaller marshaller = context.createMarshaller();
+			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			marshaller.marshal(object, new File( getFilename( object.getName() ) ) );
+		} catch (JAXBException e) {
+			
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -41,7 +57,22 @@ public class XmlWriter implements Writer {
 	 */	
 	@Override
 	public Product loadObject(String name) {
-		// TODO Auto-generated method stub
+
+		
+		
+		try {
+			JAXBContext context = JAXBContext.newInstance(Product.class);
+			
+			 Unmarshaller u = context.createUnmarshaller();
+		     Product dataObject = (Product)u.unmarshal( new File( getFilename(name) ) );
+		     
+		     return dataObject;
+		} catch (JAXBException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
 		return null;
 	}
 	
