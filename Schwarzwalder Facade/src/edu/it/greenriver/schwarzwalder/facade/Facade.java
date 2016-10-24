@@ -6,7 +6,6 @@
  */
 package edu.it.greenriver.schwarzwalder.facade;
 
-import edu.it.greenriver.schwarzwalder.manipulatestrings.StringOperations;
 import edu.it.greenriver.schwarzwalder.manipulatestrings.StringRegex;
 
 /**
