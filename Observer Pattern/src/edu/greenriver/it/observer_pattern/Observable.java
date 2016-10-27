@@ -4,37 +4,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Observable {
-	
 	private List<Observer> observers = new ArrayList<Observer>();
-	
-	public Observable(){
-		//do nothing
+	private boolean changed = false;
+
+	// a default constructor is a good thing!
+	public Observable() {
+		// do nothing
 	}
-	
-	//methods
-	public void addObserver(Observer observer){
-		//quietly ignore duplicates
-		if (!observers.contains(observer)){
+
+	// methods...
+	public void setChanged() {
+		changed = true;
+	}
+
+	public void addObserver(Observer observer) {
+		// quietly ignore duplicates
+		if (!observers.contains(observer)) {
 			observers.add(observer);
 		}
-		
 	}
-	
-	public void deleteObserver(Observer observer){
+
+	public void deleteObserver(Observer observer) {
 		observers.remove(observer);
-		
 	}
-	
-	public void notifyObservers(){
+
+	public void notifyObservers() {
 		notifyObservers(null);
-}
-	
-	public void notifyObservers(Object arguments){
-		
-		//loop over my observers
-		for (Observer observer : observers){
-			observer.update(this, arguments);
+	}
+
+	public void notifyObservers(Object arguments) {
+		if (changed) {
+			// loop over my observers
+			for (Observer observer : observers) {
+				observer.update(this, arguments);
+			}
+
+			changed = false;
 		}
 	}
 }
-
