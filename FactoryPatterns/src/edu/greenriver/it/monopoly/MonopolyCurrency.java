@@ -1,11 +1,11 @@
-package edu.greenriver.it.life;
+package edu.greenriver.it.monopoly;
 
 import java.util.List;
 
 import edu.greenriver.it.boardgame_parts.IGameCurrency;
 import edu.greenriver.it.game_components.Currency;
 
-public class LifeCurrency implements IGameCurrency
+public class MonopolyCurrency implements IGameCurrency
 {
 	@Override
 	public List<Currency> getCurrency(String type) 

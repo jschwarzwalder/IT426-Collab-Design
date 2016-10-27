@@ -1,65 +1,37 @@
-/**
- * Jami Schwarzwalder
- * Oct 20, 2016
- * LifeFactory.java
- * [Description Here]
- */
 package edu.greenriver.it.abstract_factory;
 
 import edu.greenriver.it.boardgame_parts.IGameBoard;
 import edu.greenriver.it.boardgame_parts.IGameCards;
 import edu.greenriver.it.boardgame_parts.IGameCurrency;
 import edu.greenriver.it.boardgame_parts.IGamePieces;
+import edu.greenriver.it.life.LifeCards;
+import edu.greenriver.it.life.LifeCurrency;
+import edu.greenriver.it.life.LifeGameBoard;
+import edu.greenriver.it.life.LifePieces;
 
-/**
- *
- * @author Jami Schwarzwalder
- * @version 1.1
- */
-public class LifeFactory implements IGameFactory {
-
-	/**
-	 * 
-	 * @return
-	 * @see edu.greenriver.it.abstract_factory.IGameFactory#getGameBoard()
-	 */
+public class LifeFactory implements IGameFactory
+{
 	@Override
-	public IGameBoard getGameBoard() {
-		// TODO Auto-generated method stub
-		return null;
+	public IGameBoard getBoard() 
+	{
+		return new LifeGameBoard();
 	}
 
-	/**
-	 * 
-	 * @return
-	 * @see edu.greenriver.it.abstract_factory.IGameFactory#getPieces()
-	 */
 	@Override
-	public IGamePieces getPieces() {
-		// TODO Auto-generated method stub
-		return null;
+	public IGamePieces getPieces() 
+	{
+		return new LifePieces();
 	}
 
-	/**
-	 * 
-	 * @return
-	 * @see edu.greenriver.it.abstract_factory.IGameFactory#getCurrencies()
-	 */
 	@Override
-	public IGameCurrency getCurrencies() {
-		// TODO Auto-generated method stub
-		return null;
+	public IGameCurrency getCurrencies() 
+	{
+		return new LifeCurrency();
 	}
 
-	/**
-	 * 
-	 * @return
-	 * @see edu.greenriver.it.abstract_factory.IGameFactory#getCards()
-	 */
 	@Override
-	public IGameCards getCards() {
-		// TODO Auto-generated method stub
-		return null;
+	public IGameCards getCards() 
+	{
+		return new LifeCards();
 	}
-
 }
