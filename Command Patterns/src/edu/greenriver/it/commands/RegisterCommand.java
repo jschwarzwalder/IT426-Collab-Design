@@ -4,21 +4,19 @@ import edu.greenriver.it.students.GRClass;
 import edu.greenriver.it.students.Student;
 
 public class RegisterCommand extends EnrollmentCommand {
-
-	
-	
-
-	public RegisterCommand(Student studentReciever, GRClass classReciever) {
-		super(studentReciever, classReciever);
+	public RegisterCommand(Student studentReceiver, GRClass classReceiver) {
+		super(studentReceiver, classReceiver);
 	}
-	
+
 	@Override
 	public void execute() {
-		if(!classReciever.hasStudent(studentReciever)){
-			classReciever.addStudent(studentReciever);
-		}
-
+		register();
 	}
-	
 
+	@Override
+	public void unexecute() {
+		if (somethingHappened) {
+			drop();
+		}
+	}
 }

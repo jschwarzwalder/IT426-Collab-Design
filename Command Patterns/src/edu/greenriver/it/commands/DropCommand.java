@@ -4,18 +4,19 @@ import edu.greenriver.it.students.GRClass;
 import edu.greenriver.it.students.Student;
 
 public class DropCommand extends EnrollmentCommand {
-
-
-	public DropCommand(Student studentReciever, GRClass classReciever) {
-		super(studentReciever, classReciever);
+	public DropCommand(Student studentReceiver, GRClass classReceiver) {
+		super(studentReceiver, classReceiver);
 	}
-	
 
 	@Override
 	public void execute() {
-		if(classReciever.hasStudent(studentReciever)) {
-			classReciever.removeStudent(studentReciever);
-		}
+		drop();
+	}
 
+	@Override
+	public void unexecute() {
+		if (somethingHappened) {
+			register();
+		}
 	}
 }
