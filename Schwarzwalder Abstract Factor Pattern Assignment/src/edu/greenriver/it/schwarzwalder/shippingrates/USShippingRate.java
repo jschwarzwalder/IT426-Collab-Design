@@ -24,10 +24,10 @@ public class USShippingRate implements IShippingRate {
 	@Override
 	public Rate getRate(String type, double weight) {
 		
-		if (type == "priority") {
+		if (type.equalsIgnoreCase("priority")) {
 			return new Rate("priority", weight * 3);
 
-		} else if (type =="standard"){
+		} else if (type.equalsIgnoreCase("standard")){
 			if (weight < 1){
 				return new Rate("standard", weight * 1);
 
