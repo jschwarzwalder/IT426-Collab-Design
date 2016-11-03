@@ -13,9 +13,9 @@ package edu.greenriver.it.schwarzwalder.taxcalculations;
  * @version 1.1
  */
 public interface ISalesTax {
-	
+
 	/**
-	 * Handles tax calculations 
+	 * Handles tax calculations
 	 * 
 	 * @param salesSubTotal
 	 * @return calculated sales tax

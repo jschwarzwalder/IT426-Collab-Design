@@ -21,7 +21,6 @@ public class USOrderFactory implements IOrderFactory {
 
 	private int zipcode;
 
-	
 	/**
 	 * Creates a new USSalesTax
 	 *
@@ -31,11 +30,11 @@ public class USOrderFactory implements IOrderFactory {
 	public USOrderFactory(int zipcode) {
 		this.zipcode = zipcode;
 	}
-	
+
 	/**
 	 * Generate collection of sales tax for US customers
 	 * 
-	 * @return Sales Tax 
+	 * @return Sales Tax
 	 */
 	@Override
 	public ISalesTax getTaxObject() {

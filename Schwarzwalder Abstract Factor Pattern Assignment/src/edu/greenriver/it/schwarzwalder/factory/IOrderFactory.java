@@ -20,11 +20,10 @@ public interface IOrderFactory {
 	/**
 	 * Generate collection of sales tax for US and EU customers
 	 * 
-	 * @return Sales Tax 
+	 * @return Sales Tax
 	 */
 	public ISalesTax getTaxObject();
-	
-	
+
 	/**
 	 * Generate shipping rates for US and EU customers.
 	 * 
