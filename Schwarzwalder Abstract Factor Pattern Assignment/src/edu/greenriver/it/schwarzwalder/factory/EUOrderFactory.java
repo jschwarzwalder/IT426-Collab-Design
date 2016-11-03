@@ -18,6 +18,19 @@ import edu.greenriver.it.schwarzwalder.taxcalculations.ISalesTax;
  * @version 1.1
  */
 public class EUOrderFactory implements IOrderFactory {
+	
+	private String region;
+	
+	
+	
+	/**
+	 * Creates a new EUOrderFactory
+	 *
+	 * @param region  EU country name or code
+	 */
+	public EUOrderFactory(String region) {
+		this.region = region;
+	}
 
 	/**
 	 * Generate collection of sales tax for EU customers
@@ -26,8 +39,8 @@ public class EUOrderFactory implements IOrderFactory {
 	 */
 	@Override
 	public ISalesTax getTaxObject() {
-		// TODO Auto-generated method stub
-		return new EUSalesTax();
+		
+		return new EUSalesTax(region);
 	}
 
 	/**
@@ -37,7 +50,7 @@ public class EUOrderFactory implements IOrderFactory {
 	 */
 	@Override
 	public IShippingRate getRateObject() {
-		// TODO Auto-generated method stub
+		
 		return new EUShippingRate();
 	}
 

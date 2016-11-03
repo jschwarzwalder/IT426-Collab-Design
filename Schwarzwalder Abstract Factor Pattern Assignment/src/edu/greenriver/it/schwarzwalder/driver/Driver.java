@@ -34,9 +34,11 @@ public abstract class Driver {
 		do {
 			userRegion = Console.getInt("Select a Region");
 			if (userRegion == 1) {
-				factory = new USOrderFactory();
+				int zip = Console.getInt("Enter Zipcode");
+				factory = new USOrderFactory(zip);
 			} else if (userRegion == 2) {
-				factory = new EUOrderFactory();
+				String region = Console.getString("Enter Country name or code");
+				factory = new EUOrderFactory(region);
 			}
 		} while (userRegion > 2 || userRegion < 1);
 

@@ -19,6 +19,19 @@ import edu.greenriver.it.schwarzwalder.taxcalculations.USSalesTax;
  */
 public class USOrderFactory implements IOrderFactory {
 
+	private int zipcode;
+
+	
+	/**
+	 * Creates a new USSalesTax
+	 *
+	 * @param zipcode
+	 *            shipment destination
+	 */
+	public USOrderFactory(int zipcode) {
+		this.zipcode = zipcode;
+	}
+	
 	/**
 	 * Generate collection of sales tax for US customers
 	 * 
@@ -27,7 +40,7 @@ public class USOrderFactory implements IOrderFactory {
 	@Override
 	public ISalesTax getTaxObject() {
 		// TODO Auto-generated method stub
-		return new USSalesTax();
+		return new USSalesTax(zipcode);
 	}
 
 	/**
