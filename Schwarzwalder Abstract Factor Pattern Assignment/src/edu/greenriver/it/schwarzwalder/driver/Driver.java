@@ -20,7 +20,7 @@ import edu.greenriver.it.schwarzwalder.shippingrates.Rate;
  */
 public abstract class Driver {
 
-	private final static int SUBTOTAL = 20;
+	
 
 	/**
 	 * 
@@ -51,8 +51,9 @@ public abstract class Driver {
 				factory = new EUOrderFactory(region);
 			}
 		} while (factory == null);
-
+		
 		String userOrderName = Console.getString("Enter order name");
+		double subtotal = Console.getDouble("Enter order subtotal");
 		double userWeight = Console.getDouble("Enter order weight");
 
 		Rate shippingRate = null;
@@ -62,8 +63,8 @@ public abstract class Driver {
 			shippingRate = factory.getRateObject().getRate(userShipmentType, userWeight);
 		} while (shippingRate == null);
 
-		double tax = factory.getTaxObject().calculateTax(20);
-		double total = tax + SUBTOTAL + shippingRate.getRate();
+		double tax = factory.getTaxObject().calculateTax(subtotal);
+		double total = tax + subtotal + shippingRate.getRate();
 
 		DecimalFormat dollarFormat = new DecimalFormat("###0.00");
 
@@ -77,7 +78,7 @@ public abstract class Driver {
 		orderDetails.append("\nShipping cost: ");
 		orderDetails.append(dollarFormat.format(shippingRate.getRate()));
 		orderDetails.append("\nSubtotal: ");
-		orderDetails.append(dollarFormat.format(SUBTOTAL));
+		orderDetails.append(dollarFormat.format(subtotal));
 		orderDetails.append("\nTax: ");
 		orderDetails.append(dollarFormat.format(tax));
 		orderDetails.append("\nTotal: ");
