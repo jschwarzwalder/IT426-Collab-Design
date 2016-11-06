@@ -23,12 +23,15 @@ public class HumanResources {
 	// list of Employees
 	private Map<String, Employee> namesToApplicants = new TreeMap<String, Employee>();
 
+	//Random for selecting Hourly & Salary employment type
+	private Random random = new Random();
+	
 	// public methods
 
 	public void testHiringProcess() {
 		// add command items for adding 5 new applicants to our HR system
 		String[] newEmployees = new String[] { "Rory Williams", "Amy Pond", "River Song", "John Watson", "Henry VIII" };
-		System.out.println("I am working");
+		
 		for (int i = 0; i < newEmployees.length; i++) {
 			Employee employee = new Employee(newEmployees[i]);
 
@@ -83,7 +86,6 @@ public class HumanResources {
 	private HRCommand randomizeEmployeeType(Employee employee) {
 		ChangeEmployeeType setNewEmployeeType = new ChangeEmployeeType();
 		setNewEmployeeType.setReciever(employee);
-		Random random = new Random();
 		Boolean salaryEmployee = random.nextBoolean();
 		if (salaryEmployee) {
 			setNewEmployeeType.setEmployeeType(EmployeeType.SALARY);
