@@ -7,7 +7,7 @@
 package edu.greenriver.it.hr.commands;
 
 import edu.greenriver.it.hr.OfficeStaff;
-import edu.greenriver.it.hr.employees.Employee;
+
 
 /**
  * Asks the OfficeStaff class to check references for an applicant 
@@ -25,6 +25,7 @@ public class ReferenceCheck extends HRCommand {
 	@Override
 	public void execute() {
 		OfficeStaff.referenceCheck(getReciever());
+		System.out.println("Starting reference check... success!");
 		
 	}
 

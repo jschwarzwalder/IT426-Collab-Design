@@ -25,6 +25,7 @@ public class BackgroundCheck extends HRCommand {
 	@Override
 	public void execute() {
 		OfficeStaff.backgroundCheck(getReciever());
+		System.out.println("Starting background check... success!");
 		
 	}
 

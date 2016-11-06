@@ -28,29 +28,31 @@ public class HumanResources {
 	public void testHiringProcess() {
 		// add command items for adding 5 new applicants to our HR system
 		String[] newEmployees = new String[] { "Rory Williams", "Amy Pond", "River Song", "John Watson", "Henry VIII" };
-		HRCommand[] commands = new HRCommand[25];
+		System.out.println("I am working");
 		for (int i = 0; i < newEmployees.length; i++) {
 			Employee employee = new Employee(newEmployees[i]);
 
 			// Print the name of the applicant
-			commands[i * 5] = printApplicantName(employee);
+			todos.add(printApplicantName(employee));
 
 			// Run a background check
-			commands[i * 5 + 1] = runBackgroundCheck(employee);
+			todos.add(runBackgroundCheck(employee));
 
 			// Run a reference check
-			commands[i * 5 + 2] = runReferenceCheck(employee);
+			todos.add(runReferenceCheck(employee));
 
 			// Change the employee type (randomly) to HOURLY or SALARY
-			commands[i * 5 + 3] = randomizeEmployeeType(employee);
+			todos.add(randomizeEmployeeType(employee));
 
 			// Add the employee as a new employee
-			commands[i * 5 + 4] = addEmployee(employee);
+			todos.add(addEmployee(employee));
+			
+			
 
 		}
 		
-		for (int i = 0; i < commands.length; i++){
-			commands[i].execute();
+		for (int i = 0; i < todos.size(); i++){
+			todos.get(i).execute();
 		}
 
 		// print new employees

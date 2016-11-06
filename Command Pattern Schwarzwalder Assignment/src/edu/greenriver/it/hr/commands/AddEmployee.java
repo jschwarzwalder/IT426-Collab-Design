@@ -27,6 +27,8 @@ public class AddEmployee extends HRCommand {
 	@Override
 	public void execute() {
 		humanResourcesReciever.addApplicant(getReciever());
+		System.out.println("New employee added to system");
+		System.out.println(" ");
 		
 	}
 
