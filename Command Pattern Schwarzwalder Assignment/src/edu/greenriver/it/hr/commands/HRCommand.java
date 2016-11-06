@@ -1,6 +1,10 @@
 package edu.greenriver.it.hr.commands;
 
-public abstract class HRCommand
-{
-    
+import edu.greenriver.it.hr.employees.Employee;
+
+public abstract class HRCommand {
+	private Employee reciever;
+	
+	public abstract void execute();
+
 }

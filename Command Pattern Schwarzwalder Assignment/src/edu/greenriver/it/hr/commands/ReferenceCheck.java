@@ -1,0 +1,31 @@
+/**
+ * Jami Schwarzwalder
+ * Nov 5, 2016
+ * ReferenceCheck.java
+ * Asks the OfficeStaff class to check references for an applicant 
+ */
+package edu.greenriver.it.hr.commands;
+
+import edu.greenriver.it.hr.OfficeStaff;
+import edu.greenriver.it.hr.employees.Employee;
+
+/**
+ * Asks the OfficeStaff class to check references for an applicant 
+ *
+ * @author Jami Schwarzwalder
+ * @version 1.1
+ */
+public class ReferenceCheck extends HRCommand {
+	private Employee reciever;
+
+	/**
+	 * 
+	 * @see edu.greenriver.it.hr.commands.HRCommand#execute()
+	 */
+	@Override
+	public void execute() {
+		OfficeStaff.referenceCheck(reciever);
+		
+	}
+
+}

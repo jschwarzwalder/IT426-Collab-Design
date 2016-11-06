@@ -1,39 +1,32 @@
 package edu.greenriver.it.hr.employees;
 
-public class Employee
-{
-    private String name;
-    private EmployeeType type;
-    
-    public Employee(String name)
-    {
-        this.name = name;
-    }
-    
-    //getters/setters
+public class Employee {
+	private String name;
+	private EmployeeType type;
 
-    public String getName()
-    {
-        return name;
-    }
+	public Employee(String name) {
+		this.name = name;
+	}
 
-    public void setName(String name)
-    {
-        this.name = name;
-    }
+	// getters/setters
 
-    public EmployeeType getType()
-    {
-        return type;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setType(EmployeeType type)
-    {
-        this.type = type;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String toString()
-    {
-        return name + " (" + type + ")";
-    }
+	public EmployeeType getType() {
+		return type;
+	}
+
+	public void setType(EmployeeType type) {
+		this.type = type;
+	}
+
+	public String toString() {
+		return name + " (" + type + ")";
+	}
 }
