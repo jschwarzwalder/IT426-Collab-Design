@@ -16,7 +16,7 @@ import edu.greenriver.it.hr.employees.Employee;
  * @version 1.1
  */
 public class BackgroundCheck extends HRCommand {
-	private Employee reciever;
+	
 
 	/**
 	 * 
@@ -24,7 +24,7 @@ public class BackgroundCheck extends HRCommand {
 	 */
 	@Override
 	public void execute() {
-		OfficeStaff.backgroundCheck(reciever);
+		OfficeStaff.backgroundCheck(getReciever());
 		
 	}
 

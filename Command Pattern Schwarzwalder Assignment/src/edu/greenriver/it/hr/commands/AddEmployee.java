@@ -17,16 +17,23 @@ import edu.greenriver.it.hr.employees.Employee;
  */
 public class AddEmployee extends HRCommand {
 	
-	private Employee employeeReciever;
+	
 	private HumanResources humanResourcesReciever;
+	
 	/**
 	 * 
 	 * @see edu.greenriver.it.hr.commands.HRCommand#execute()
 	 */
 	@Override
 	public void execute() {
-		humanResourcesReciever.addApplicant(employeeReciever);
+		humanResourcesReciever.addApplicant(getReciever());
 		
 	}
+
+	public void setHumanResourcesReciever(HumanResources humanResourcesReciever) {
+		this.humanResourcesReciever = humanResourcesReciever;
+	}
+	
+	
 
 }

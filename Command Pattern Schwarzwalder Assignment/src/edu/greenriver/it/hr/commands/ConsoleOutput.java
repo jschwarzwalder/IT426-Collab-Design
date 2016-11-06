@@ -15,7 +15,8 @@ import edu.greenriver.it.hr.employees.Employee;
  * @version 1.1
  */
 public class ConsoleOutput extends HRCommand {
-	private Employee reciever;
+	
+	private String message;
 
 	/**
 	 * 
@@ -23,8 +24,14 @@ public class ConsoleOutput extends HRCommand {
 	 */
 	@Override
 	public void execute() {
-		System.out.println(reciever.getName());
+		System.out.println(message);
 		
 	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+	
 
 }

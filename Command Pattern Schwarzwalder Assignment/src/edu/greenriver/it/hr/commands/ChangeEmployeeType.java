@@ -6,7 +6,6 @@
  */
 package edu.greenriver.it.hr.commands;
 
-import edu.greenriver.it.hr.employees.Employee;
 import edu.greenriver.it.hr.employees.EmployeeType;
 
 /**
@@ -17,8 +16,8 @@ import edu.greenriver.it.hr.employees.EmployeeType;
  */
 public class ChangeEmployeeType extends HRCommand {
 
-	private Employee reciever;
-	private EmployeeType employeetype;
+	
+	private EmployeeType employeeType;
 	
 	/**
 	 * 
@@ -29,8 +28,14 @@ public class ChangeEmployeeType extends HRCommand {
 		
 		
 		
-		reciever.setType(employeetype);
+		getReciever().setType(employeeType);
 		
 	}
+
+	public void setEmployeeType(EmployeeType employeeType) {
+		this.employeeType = employeeType;
+	}
+	
+	
 
 }
