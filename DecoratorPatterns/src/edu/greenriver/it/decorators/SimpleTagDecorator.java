@@ -17,7 +17,7 @@ public class SimpleTagDecorator implements IDecorateHtml {
 	private IDecorateHtml html;
 	private HtmlTags tagType;
 
-	public SimpleTagDecorator (IDecorateHtml html, HtmlTags tagType) {
+	public SimpleTagDecorator ( HtmlTags tagType, IDecorateHtml html) {
 		
 		this.html = html;
 		this.tagType = tagType;

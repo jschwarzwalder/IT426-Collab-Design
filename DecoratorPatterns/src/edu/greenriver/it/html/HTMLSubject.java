@@ -13,7 +13,7 @@ package edu.greenriver.it.html;
  * @author Jami Schwarzwalder
  * @version 1.1
  */
-public class HTMLSubject {
+public class HTMLSubject implements IDecorateHtml {
 	
 	private String html;
 	

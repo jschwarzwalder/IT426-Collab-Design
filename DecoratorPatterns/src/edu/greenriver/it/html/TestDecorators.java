@@ -9,6 +9,7 @@ package edu.greenriver.it.html;
 import edu.greenriver.it.decorators.BoldDecorator;
 import edu.greenriver.it.decorators.HtmlTags;
 import edu.greenriver.it.decorators.ItalicsDecorator;
+import edu.greenriver.it.decorators.SimpleTagDecorator;
 
 /**
  *

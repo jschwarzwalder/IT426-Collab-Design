@@ -28,7 +28,7 @@ public class BoldDecorator implements IDecorateHtml {
 	 */
 	@Override
 	public String generateHTML() {
-		//retieve the subject's html
+		//Retrieve the subject's html
 		
 		
 		String subjectHtml = html.generateHTML();

@@ -36,7 +36,7 @@ public class ItalicsDecorator implements IDecorateHtml{
 		//retrieve the subjec's html
 		String subjectHtml = html.generateHTML();
 		
-		return "em" + subjectHtml + "</em>";
+		return "<em>" + subjectHtml + "</em>";
 	}
 
 }
