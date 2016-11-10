@@ -31,7 +31,7 @@ public class ImageDecorator implements IDecorateHtml {
 	@Override
 	public String generateHTML() {
 		// TODO Auto-generated method stub
-		return "<p> <img src=\"" + image + "\" style=\"float:right\" />" + html.generateHTML() + "</p>";
+		return "<p> <img src=\"" + image + "\" style=\"float:right;width: 50%; height: auto;\" />" + html.generateHTML() + "</p>";
 	}
 
 }
