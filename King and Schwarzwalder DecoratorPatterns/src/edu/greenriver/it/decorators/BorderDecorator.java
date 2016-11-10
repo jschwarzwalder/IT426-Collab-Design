@@ -22,18 +22,19 @@ public class BorderDecorator implements IDecorateHtml {
 	private BorderStyle borderStyle;
 	private int borderThickness;
 
-	private enum BorderStyle {
-		SOLID,
-		DASHED;
-		
-		private String borderValue; 
-			private BorderStyle(String borderValue){
-				this.borderValue = borderValue;
-				
-			}
-			
-			
-		
+	public enum BorderStyle {
+		SOLID("solid"), DASHED("dashed");
+
+		private String borderValue;
+
+		private BorderStyle(String borderValue) {
+			this.borderValue = borderValue;
+
+		}
+
+		public String getBorderValue() {
+			return borderValue;
+		}
 
 	}
 
@@ -52,7 +53,9 @@ public class BorderDecorator implements IDecorateHtml {
 	@Override
 	public String generateHTML() {
 		// TODO Auto-generated method stub
-		return 
+		return "<div style='border-style:" + borderStyle.getBorderValue() + "; border-width:" + borderThickness
+				+ "px; border-color:rgb(" + borderColor.getRed() + ", " + borderColor.getGreen() + ", "
+				+ borderColor.getBlue() + ")'>" + html.generateHTML() + "</div>";
 	}
 
 }
