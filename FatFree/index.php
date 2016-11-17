@@ -1,34 +1,55 @@
 <?php
-	//load autoloader
-	require('vendor/autoload.php');
-	
-	//get our router
-	$f3 = require('vendor/bcosca/fatfree-core/base.php');
-	
-	//create a few routes
-	$f3->route('GET /', 'GenerateViews->showHome');//base route is 'GET /'
-	
-	$f3->route('GET /about', 'GenerateViews->showAboutUs');
-	
-	$f3->route('GET /site', 'GenerateViews->showSiteMap');
-	$f3->route('GET /calculatePrime/@number', function($f3, $params){
-		$number = $params['number'];
-		
-		if($number <= 1){
-			//redirect
-			
-			//or http error code
-			$f3 -> error(404);
-		}
-	}
-	
-	//turn on more verbose error handling through router
-	$f3 ->set('DEBUG', 3); //0 means surpressed, 3 verbose
-	$f3 ->set('ONERROR', function($f3){
-		echo 'Error text '.$f3->get('ERROR.text').'<br>';
-		echo 'Error trace '.$f3->get('ERROR.trace').'<br>';
-	});
-	
-	//start router
-	$f3->run();
+//load autoloader
+require('vendor/autoload.php');
+
+//get our router
+$f3 = require('vendor/bcosca/fatfree-core/base.php');
+
+
+
+
+    $f3-> route('GET /variables', function($f3){
+        $f3 -> set('username', 'myUsername');
+        $f3 -> set('password', sha1('password'));
+        
+        $f3-> set('title', 'My new page');
+        
+        echo 'Username: '. $f3->get('username').'<br>';
+        echo 'Password: '. $f3->get('password').'<br>';
+
+        $f3 -> set('bookmarks', array('https://www.hackerrank.com/',
+                                        'https://www.livecoding.tv',
+                                        'https://teamtreehouse.com/'));
+
+        $f3 -> set('bookmarkNames', array('hacker rank',
+            'live coding',
+            'treehouse'));
+
+        $f3 -> set('bookmarkKeyValues', array(hackerrank =>'https://www.hackerrank.com/',
+            livecoding =>'https://www.livecoding.tv',
+            Treehouse =>'https://teamtreehouse.com/'));
+
+
+
+
+
+        //load page
+        echo Template::instance()->render('views/templating_language.php');
+
+
+
+    });
+
+
+
+
+//turn on more verbose error handling through router
+$f3 ->set('DEBUG', 3); //0 means surpressed, 3 verbose
+$f3 ->set('ONERROR', function($f3){
+    echo 'Error text '.$f3->get('ERROR.text').'<br>';
+    echo 'Error trace '.$f3->get('ERROR.trace').'<br>';
+});
+
+//start router
+$f3->run();
 ?>

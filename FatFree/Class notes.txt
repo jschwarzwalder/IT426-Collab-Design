@@ -1,0 +1,7 @@
+Fat Free MVC
+
+models = Rules
+controller = manager
+views = UI
+data = DB
+Entities = Data classes
