@@ -29,7 +29,12 @@ $f3 = require('vendor/bcosca/fatfree-core/base.php');
             livecoding =>'https://www.livecoding.tv',
             Treehouse =>'https://teamtreehouse.com/'));
 
-
+        $f3 ->set('bookmarkObjects', array(
+            new Bookmark('http://www.reddit.com/r/coding', 'Coding at Reddit',
+                    date('F j, Y \a\t g:ia;', strtotime('-1week'))),
+            new Bookmark('https://www.cnet.com', 'Technology Reviews',
+                date('F j, Y \a\t g:ia;', strtotime('- 2 month'))),
+        ))
 
 
 
