@@ -11,11 +11,13 @@ class Bookmark {
     private $url;
     private $name;
     private $lastVisited;
+    private $favorite;
 
-    public function __construct( $url, $name, $lastVisited)    {
+    public function __construct( $url, $name, $lastVisited, $favorite)    {
         $this->url = $url;
         $this->name = $name;
         $this->lastVisited = $lastVisited;
+        $this->favroite = $favorite;
     }
 
     public function __get($name)

@@ -16,5 +16,10 @@
         </li>
     </repeat>
 </ul>
+
+<hr>
+{{@bookmarkObjects[0] ->__toString() }}
+    <check if ="@bookmarkObjects[0]->favorite">***</check>
+<hr>
  </body>
 </html>

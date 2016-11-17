@@ -34,7 +34,7 @@ $f3 = require('vendor/bcosca/fatfree-core/base.php');
                     date('F j, Y \a\t g:ia;', strtotime('-1week'))),
             new Bookmark('https://www.cnet.com', 'Technology Reviews',
                 date('F j, Y \a\t g:ia;', strtotime('- 2 month'))),
-        ))
+        ));
 
 
 
