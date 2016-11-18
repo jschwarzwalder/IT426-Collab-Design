@@ -69,3 +69,5 @@ Singleton Pattern/.project
 *.zip
 *.project
 *.prefs
+*.xml
+FatFree/.idea/FatFree.iml

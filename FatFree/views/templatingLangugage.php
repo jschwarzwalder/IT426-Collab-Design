@@ -19,7 +19,16 @@
 
 <hr>
 {{@bookmarkObjects[0] ->__toString() }}
-    <check if ="@bookmarkObjects[0]->favorite">***</check>
+    <check if ="@bookmarkObjects[0]->favorite">
+        <true>***</true>
+        <false>*</false>
+    </check>
 <hr>
+    {{@bookmarkObjects[1] ->__toString() }}
+    <check if ="@bookmarkObjects[0]->favorite">
+        <true>***</true>
+        <false>*</false>
+    </check>
+    <hr>
  </body>
 </html>

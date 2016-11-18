@@ -5,3 +5,25 @@ controller = manager
 views = UI
 data = DB
 Entities = Data classes
+
+
+ /home/jschwarzwalder/composer.phar dump-autoload
+ 
+ with sha1 limit number of allowed logins
+
+ {{ @value | raw }} - to get html to print out
+ 
+ 
+ iRepository --> Test(Data)
+			 --> Database(Data) -- Propel ORM
+			 
+Data from iRepository
+to Model (Rules)
+through Controller
+Displays with View
+
+View and Model do not have access to eachother. 
+
+https://packagist.org/packages/bcosca/fatfree-core
+
+https://www.livecoding.tv/livestreams/
