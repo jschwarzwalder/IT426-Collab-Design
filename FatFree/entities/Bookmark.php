@@ -1,32 +1,27 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: Jami Schwarzwalder
- * Date: 11/17/2016
- * Time: 10:45 AM
- */
-class Bookmark {
-
-    private $url;
-    private $name;
-    private $lastVisited;
-    private $favorite;
-
-    public function __construct( $url, $name, $lastVisited, $favorite)    {
-        $this->url = $url;
-        $this->name = $name;
-        $this->lastVisited = $lastVisited;
-        $this->favroite = $favorite;
-    }
-
-    public function __get($name)
+    class BookMark
     {
-       return $this->$name;
+        private $url;
+        private $name;
+        private $lastVisited;
+        private $favorited;
+        
+        public function __construct($url, $name, $lastVisited, $favorited)
+        {
+            $this->url = $url;
+            $this->name = $name;
+            $this->lastVisited = $lastVisited;
+            $this->favorited = $favorited;
+        }
+        
+        public function __get($name)
+        {
+            return $this->$name;
+        }
+        
+        public function __toString()
+        {
+            return "$this->name - $this->url ($this->lastVisited)";
+        }
     }
-
-    public function __toString(){
-        return "$name - $url ($lastVisited)";
-    }
-
-}
+?>
