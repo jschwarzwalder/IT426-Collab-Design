@@ -39,6 +39,17 @@ public class Bullet {
 		this.damage = damage;
 	}
 	
+	public void  shoot(Ship weapon, Canvas gameScreen){
+		this.velocity = weapon.velocity;
+		this.postion = weapon.position;
+		
+		while(this.position != otherObject){
+			
+		}
+		
+		
+		
+	}
 	
 	
 	
