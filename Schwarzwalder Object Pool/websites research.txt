@@ -1,0 +1,22 @@
+Unity Object Pooling
+https://unity3d.com/learn/tutorials/topics/scripting/object-pooling
+
+SourceMaking
+https://sourcemaking.com/design_patterns/object_pool
+
+Game Programing Patterns
+http://gameprogrammingpatterns.com/object-pool.html
+
+CodeProject
+https://www.codeproject.com/articles/20848/c-object-pooling
+
+JavaWorld
+http://www.javaworld.com/article/2076690/java-concurrency/build-your-own-objectpool-in-java-to-boost-app-speed.html
+DZone
+https://dzone.com/articles/creating-object-pool-java
+
+
+
+.NET Framework
+https://msdn.microsoft.com/en-us/library/ff7105zk(v=vs.71).aspx
+
