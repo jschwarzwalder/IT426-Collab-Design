@@ -1,12 +1,13 @@
 <?php
+
     class TestBlogRepository implements IBlogRepository
     {
         //bogus test data (for now...)
         private $testBlogs;
-        
-		private $user1 = new user("jthompson", "Jeff", "Thompson", "He is Jeff Thompson");
+
+		private $user1 = new user('jthompson', 'Jeff', 'Thompson', 'He is Jeff Thompson');
 		private $user2 = new user("sjackson", "Sasha", "Jackson", "She is a Jackson");
-		private $user3 = new user("rmcdonald", "Rosey", "McDonald", "She is not Jeff Thompason");
+		private $user3 = new user("rmcdonald", "Rosey", "McDonald", "She is not Jeff Thompson");
 		
         private $users = array($user1, $user2, $user3);
         //name => blogs

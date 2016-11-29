@@ -10,10 +10,10 @@
         //constructors
         public function __construct($username, $fname, $lname, $bio)
         {
-            $this-> username = $username;
-			$this-> fname = $fname;
-			$this-> lname = $lname;
-			$this-> bio = $bio;
+            $this->username = $username;
+			$this->fname = $fname;
+			$this->lname = $lname;
+			$this->bio = $bio;
         }
         
         //methods!

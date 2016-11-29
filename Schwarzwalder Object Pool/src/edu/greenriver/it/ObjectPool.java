@@ -14,7 +14,7 @@ import java.util.LinkedList;
  * @author Jami Schwarzwalder
  * @version 1.1
  */
-public class ObjectPool<T> {
+public class ObjectPool<T>  implements IObjectPool{
 
 	// create list to store objects
 	private LinkedList objectPool = new LinkedList();
@@ -24,22 +24,28 @@ public class ObjectPool<T> {
 
 	// Option 2 is to generate objects when requested and none are available
 	private int maxPoolSize = 50;
+	
+	private 
 
-	
-	
-	public ObjectPool() {
+	public ObjectPool(Class<T> clazz) {
 		
 		for (int i = 0; i < poolSize; i++) {
 			
 		}
+		private static class SomeContainer<T> 
+		T createContents(Class<T> clazz){
+			return clazz.newInstance();
+		}
 	}
-	
-	public T getObject(){
 		
 	}
-	
-	public void returnObject(T object){
-		
+
+	public T getObject() {
+
+	}
+
+	public void returnObject(T object) {
+
 	}
 
 }
