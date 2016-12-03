@@ -1,0 +1,13 @@
+Object Pool is a design pattern that allows you to reuse objects you are repeatedly creating and destroying in your code. Instead of destroying the object you change its state or add it to a waiting queue to be used again when needed next. This can reduce memory spikes from random garbage collection and can create more consistent memory management.
+
+Use: When creating an object is expensive like reading from a file or accessing a database.
+Object Pool is best when you are repeatedly creating and destroying many identical objects. 
+If you are only using an object once in your code, object pool will not save you anything. It will add more unnecessary complexity and memory overhead.
+Best Practices are to create just enough objects. Some implementations allow the pool to grow if an object isn't available, however you could waste memory if there is not a consistent amount of objects needed by your program. If you do want to allow your pool to grow, add a max size to prevent memory leaks.  If you are using multi-threading and your pool is at max size when a request is made it can wait for one to become available. However with threading, you might want your object pool to be a singleton for each type of object you want to build a pool. 
+
+Like Factory Pattern the Object Pool creates the objects for you. An object Pool can only consist of similar objects of the same type. The important thing is that they need to be interchangeable.
+
+An object pool is an object that stores objects in a data structure to create object permanence. Inside there is a mechanism to identify which objects are not currently in use. There should be a public method to request an object that will return an object that is available for reuse. A second public method should allow an object to be returned, thus adding it back to the list of unused objects and resetting the defaults on the object.
+Any object can be stored in an object pool given reasonable default values that can be reset with less work than it would take to just make a new object.
+The Third object used in this pattern is the requesting object. This is a controller that uses whichever objects are stored in your pool. It needs to make sure it returns the object when it is finished or this pattern doesn't work. It also needs to handle the case of an object no being available for use when requested. 
+ 
